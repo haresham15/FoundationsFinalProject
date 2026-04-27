@@ -18,10 +18,10 @@ FoundationsFinalProject/
 ├── benchmarks/                 # Performance analysis
 │   ├── benchmark.py            # Benchmark runner + chart generator
 │   └── results/                # Generated charts and CSV data
-├── visualization/              # Interactive web visualizer
-│   ├── index.html
-│   ├── style.css
-│   └── app.js
+├── visualization/              # Interactive web visualizer (Next.js)
+│   ├── src/                    # Frontend source code
+│   │   ├── app/                # Next.js App Router (page.js, globals.css)
+│   │   └── lib/                # Shared logic (rbt.js)
 ├── docs/
 │   └── report.md               # Implementation report
 ├── requirements.txt
