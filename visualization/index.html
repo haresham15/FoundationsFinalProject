@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Red-Black Tree Visualizer</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; text-align: center; }
+        #canvas { border: 1px solid #ccc; margin-top: 20px; }
+        .controls { margin: 20px 0; }
+        button, input { padding: 8px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <h2>Red-Black Tree Visualizer</h2>
+    <p>A simple visualizer for the Red-Black Tree structure.</p>
+    
+    <div class="controls">
+        <input type="number" id="nodeValue" placeholder="Enter value">
+        <button onclick="addNode()">Insert Node</button>
+        <button onclick="clearTree()">Clear Tree</button>
+    </div>
+    
+    <canvas id="canvas" width="800" height="500"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Very basic mock representation
+        let nodes = [];
+        
+        function drawTree() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            let y = 50;
+            let x = 400;
+            
+            nodes.forEach((val, i) => {
+                // Just drawing them in a line for simplicity in this mock
+                ctx.beginPath();
+                ctx.arc(x, y + i * 50, 20, 0, 2 * Math.PI);
+                ctx.fillStyle = i % 2 === 0 ? "black" : "red";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                
+                ctx.fillStyle = "white";
+                ctx.font = "14px Arial";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.fillText(val, x, y + i * 50);
+            });
+        }
+        
+        function addNode() {
+            const val = document.getElementById('nodeValue').value;
+            if (val) {
+                nodes.push(parseInt(val));
+                drawTree();
+                document.getElementById('nodeValue').value = '';
+            }
+        }
+        
+        function clearTree() {
+            nodes = [];
+            drawTree();
+        }
+    </script>
+</body>
+</html>

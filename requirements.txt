@@ -1,4 +1,1 @@
-pytest>=7.0
-pytest-cov>=4.0
-matplotlib>=3.7
-tabulate>=0.9
+# No external dependencies required for this basic implementation.
