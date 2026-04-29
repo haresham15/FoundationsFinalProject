@@ -17,8 +17,5 @@ Deletion is similar to a regular BST where we might have to replace a node with 
 I wrote a basic benchmark script that tests the insertion time for 1,000, 5,000, and 10,000 elements.
 Compared to a regular Binary Search Tree, the Red-Black tree is much faster when inserting sorted data because it stays balanced. The AVL tree is also balanced but does more rotations than the Red-Black tree, making the RBT slightly faster for insertions.
 
-## Testing
-I wrote a `test.py` script that does some basic inserts and deletes and verifies that the `inorder` traversal returns the keys in sorted order. It prints out confirmation when the tests pass.
-
 ## Conclusion
 Implementing this tree was challenging, especially the delete fixup cases, but it works and successfully keeps the tree balanced in O(log n) time.
