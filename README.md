@@ -6,11 +6,15 @@ This is my final project for Foundations of Computer Science. I implemented a Re
 - `src/rbt.py`: The main Red-Black Tree implementation.
 - `src/bst.py`: A standard Binary Search Tree for comparison.
 - `src/avl.py`: An AVL Tree for comparison.
+- `test_rbt.py`: Test suite demonstrating correctness.
 - `benchmarks/benchmark.py`: Script to measure insertion times.
 - `visualization/index.html`: A very basic HTML page to visualize trees.
 - `docs/report.md`: My write-up explaining the data structure.
 
 # How to Run
+
+To run the tests:
+python test_rbt.py
 
 To run the benchmarks:
 python benchmarks/benchmark.py
