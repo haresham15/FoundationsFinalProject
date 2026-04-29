@@ -19,11 +19,9 @@ def generate_random_keys(n: int, seed: int = 42) -> list[int]:
 def generate_sorted_keys(n: int) -> list[int]:
     return list(range(1, n + 1))
 
-
 def generate_reverse_sorted_keys(n: int) -> list[int]:
     return list(range(n, 0, -1))
-
-
+    
 def verify_rbt_height_bound(tree: RedBlackTree) -> bool:
     if tree.is_empty:
         return True
@@ -34,7 +32,6 @@ def verify_rbt_height_bound(tree: RedBlackTree) -> bool:
 
 def tree_to_dict(tree: RedBlackTree) -> dict | None:
     from src.rbt import Color
-
     def _node_to_dict(node):
         if node is tree.NIL:
             return None
@@ -44,5 +41,4 @@ def tree_to_dict(tree: RedBlackTree) -> dict | None:
             "left": _node_to_dict(node.left),
             "right": _node_to_dict(node.right),
         }
-
     return _node_to_dict(tree.root)
